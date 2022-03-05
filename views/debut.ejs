@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Services</title>
+    <link rel="stylesheet" href="css/debut.css">
+
+</head>
+<body>
+    <div class="background"></div>
+    <a  href="/gallery">Back</a>
+
+    <h1><center>Debut</center></h1>
+
+    <div class="container">
+        <% for(var i = 0; i < image.length; i++) { %>
+        <div class="box">
+            <img src="img/debut/<%= image[i].image %>" >
+        </div>
+        <% } %>
+    </div>
+
+
+</body>
+</html>

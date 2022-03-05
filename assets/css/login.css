@@ -1,0 +1,140 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.background {
+  background: url("https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/244361116_374396417757006_6038309920875741066_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeEPpPx5eisRGy0E2XiUcgTsGDzgIi6Z4CAYPOAiLpngIG-uY0gAaAW6JkMMP3W_mH7EWfLdhLo_HgJTsKZM9yra&_nc_ohc=p07SWmPRVPEAX_E6cKU&tn=ljhOIj1c5XlzE8CK&_nc_ht=scontent.fmnl17-3.fna&oh=00_AT_masuF9tvn5xqPQxjrIOnNOyQHkjl__Xls818shikamA&oe=61E72038");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  filter: blur(5px);
+  min-height: 800px;
+
+}
+a
+{
+position: relative;
+display: inline-block;
+padding: 5px 36px;
+margin: 10px 0;
+color: black;
+text-decoration: none;
+text-transform:  uppercase;
+font-size: 18px;
+letter-spacing: 2px;
+border-radius: 10px;
+background: linear-gradient(90deg,#c8dcf1, #55e7fc);
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  margin: 10vh auto;
+  background-color: rgb(243, 240, 240);
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+  border-radius: 25px;
+}
+h2 {
+  font-size: 30px;
+}
+
+form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.form-item {
+  display: flex;
+  width: 90%;
+  background: white;
+  margin: 10px auto;
+  border-radius: 15px;
+  align-items: center;
+  border-bottom: 1px solid rgb(82, 81, 81);
+}
+
+.form-item:hover {
+  border: 1px solid rgb(231, 163, 163);
+}
+
+input {
+  background: transparent;
+  width: 80%;
+  height: 30px;
+  outline: none;
+  border: none;
+  margin: auto;
+  color: black;
+  font-size: 17px;
+}
+
+span {
+  user-select: none;
+  margin: 5px;
+  color: rgb(172, 172, 172);
+  background: white;
+  padding: 5px;
+  border-radius: 18px;
+}
+button[type="submit"] {
+  width: 180px;
+  font-size: 20px;
+  margin: 10px auto;
+  padding: 8px;
+  background: rgba(214, 214, 212, 0.72);
+  border: none;
+  color: black;
+}
+button[type="submit"]:hover {
+  background: rgba(222, 236, 34, 0.678);
+}
+p:first-of-type {
+  margin: 0;
+}
+.options {
+  display: flex;
+  margin: 10px auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+button {
+  font-size: 18px;
+  padding: 5px 16px;
+  margin: 5px 15px;
+  width: 180px;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+p {
+  font-size: 18px;
+  margin: 5px;
+}
+a {
+  color: white;
+}
+a:hover {
+  color: grey;
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 90%;
+  }
+}

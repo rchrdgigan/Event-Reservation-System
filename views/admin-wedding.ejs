@@ -1,0 +1,68 @@
+<%- include('includes/_admin-header'); -%>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+
+      <button type="submit" 
+            class="btn btn-warning mb-2" 
+            data-toggle="modal" 
+            data-target="#addPicModal">
+            <i class="fas fa-plus"></i>
+            Add Picture
+        </button>
+
+        
+        <div class="row">
+
+            <% for(var i = 0; i < image.length; i++) { %>
+            <div class="col-md-2">
+                <div class="card card-success">
+                  <div class="card-header">
+                      <div class="card-tools">
+                          <a data-id="<%= image[i]._id %>" class="btn delete btn-tool">
+                              <i class="fas fa-trash"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                    <img src="img/wedding/<%= image[i].image %>" height="250" width="135">
+                  </div>
+                </div>
+            </div> 
+            <% } %>
+            
+        </div>   
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal ADD Pic -->
+<div class="modal fade" id="addPicModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header bg-primary">
+          <h5 class="modal-title" id="exampleModalLabel">Add Wedding Image</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+              <form action="/admin-wedding" method="post" enctype="multipart/form-data">
+                  <div class="card-body">
+
+                    <div class="form-group col-12">
+                        <label for="image">Upload Image:</label>
+                        <input type="file" class="form-control" required name="image" id="image">
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+                  <div class="card-footer">
+                      <button type="submit" class="btn btn-primary float-right">Add</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<%- include('includes/_admin-footer'); -%>

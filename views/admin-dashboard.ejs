@@ -1,0 +1,54 @@
+<%- include('includes/_admin-header'); -%>
+ <!-- Main content -->
+<div class="content">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+         <div class="row">
+            <!-- Count Customer S-->
+            <div class="col-lg-4 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+                  <p>Customer Registered</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <a href="/admin-customer-list" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <!-- Count Customer E-->
+           <div class="col-lg-4 col-6">
+             <!-- small box -->
+             <div class="small-box bg-success">
+               <div class="inner">
+                 <p>Users Contact</p>
+               </div>
+               <div class="icon">
+                  <i class="fas fa-id-card"></i>
+               </div>
+               <a href="/admin-contact" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+             </div>
+           </div>
+           <!-- ./col -->
+            <!-- ./col -->
+            <div class="col-lg-4 col-6">
+              <!-- small box -->
+              <div class="small-box bg-purple">
+                <div class="inner">
+                  <p>Reservation History</p>
+                </div>
+                <div class="icon">
+                   <i class="fas fa-id-card"></i>
+                </div>
+                <a href="/admin-reservation-list" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+         </div>
+         <!-- /.row -->
+   </div>   
+</div>
+  <!-- /.content -->
+<%- include('includes/_admin-footer'); -%>

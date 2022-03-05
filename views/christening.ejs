@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Services</title>
+    <link rel="stylesheet" href="css/christening.css">
+
+</head>
+<body>
+    <div class="background"></div>
+    <a  href="/gallery">Back</a>
+
+    <h1><center>Christening</center></h1>
+
+    <div class="container">
+        <% for(var i = 0; i < image.length; i++) { %>
+        <div class="box">
+            <img src="img/christening/<%= image[i].image %>" >
+        </div>
+        <% } %>
+    </div>
+    
+    <div class="container1">
+        <div class="box">
+            <img src="img/c9.jpg">
+        </div>
+        <div class="box">
+            <img src="img/c10.jpg">
+        </div>
+    </div>
+
+</body>
+</html>

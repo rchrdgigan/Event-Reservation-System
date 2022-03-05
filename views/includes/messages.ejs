@@ -1,0 +1,25 @@
+<% if(typeof errors != 'undefined') { %>
+    <% errors.forEach(function(error) { %>
+        <div style="background-color: burlywood; padding: 10px; margin-bottom: 2px; border-radius: 10px;">
+            <%= error.msg %>
+        </div>
+   <% }); %>
+<% } %>
+
+<% if(success_msg != '') { %>
+    <div style="background-color: rgb(123, 193, 125); padding: 10px; margin-bottom: 2px; border-radius: 10px;">
+        <%= success_msg %>
+    </div>
+<% } %>
+
+<% if(error_msg != '') { %>
+    <div style="background-color: burlywood; padding: 10px; margin-bottom: 2px; border-radius: 10px;">
+        <%= error_msg %>
+    </div>
+<% } %>
+
+<% if(error != '') { %>
+    <div style="background-color: burlywood; padding: 10px; margin-bottom: 2px; border-radius: 10px;">
+        <%= error %>
+    </div>
+<% } %>

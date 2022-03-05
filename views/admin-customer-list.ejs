@@ -1,0 +1,48 @@
+<%- include('includes/_admin-header'); -%>
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary">
+            <h3 class="card-title">List of Customer Registered</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th hidden="">No.</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Address</th>
+                  <th>Contact</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for(var i = 0; i < user.length; i++) { %>
+                <tr>
+                  <td hidden=""><%= i + 1 %></td>
+                  <td><%= user[i].fname %></td>
+                  <td><%= user[i].lname %></td>
+                  <td><%= user[i].address %></td>
+                  <td><%= user[i].contact_no %></td>
+                  <td><%= user[i].email %></td>
+                  <!-- <td>
+                    <a data-id="<% user[i]._id%>" class="btn btn-danger delete .btn-sm">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </td> -->
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+    </div>
+  </div>
+  
+<%- include('includes/_admin-footer'); -%>

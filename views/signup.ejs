@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/login.css" rel="stylesheet">
+
+  <title>Login form</title>
+
+</head>
+
+<body>
+
+  <div class="background"></div>
+  <a  href="/">Back</a>
+
+  <div class="container">
+    <h2>Sign up</h2>
+  <%- include('./includes/messages'); -%>
+
+    <form action="/signup" method="POST">
+
+        <div class="form-item">
+            <span class="material-icons-outlined">
+            </span>
+            <input type="text" name="fname" id="fname" placeholder="First Name" value="<%= typeof fname != 'undefined' ? fname : '' %>" required autofocus>
+          </div>
+
+          <div class="form-item">
+            <span class="material-icons-outlined">
+            </span>
+            <input type="text" name="lname" id="lname" placeholder="Last Name" value="<%= typeof lname != 'undefined' ? lname : '' %>" required autofocus>
+          </div>
+
+          <div class="form-item">
+            <span class="material-icons-outlined">
+            </span>
+            <input type="text" name="address" id="address" placeholder="Address" value="<%= typeof address != 'undefined' ? address : '' %>" required>
+          </div>
+
+          <div class="form-item">
+            <span class="material-icons-outlined">
+            </span>
+            <input type="tel" name="contact_no" id="contactnum" value="<%= typeof contact_no != 'undefined' ? contact_no : '' %>" placeholder="Contact Number" required>
+          </div>
+
+          <div class="form-item">
+            <span class="material-icons-outlined">
+            </span>
+            <input type="text" name="fb_name" id="fbacc" value="<%= typeof fb_name != 'undefined' ? fb_name : '' %>" placeholder="Facebook Account" required>
+          </div>
+
+      <div class="form-item">
+        <span class="material-icons-outlined">
+        </span>
+        <input type="email" name="email" id="user" value="<%= typeof email != 'undefined' ? email : '' %>" placeholder="Email" value="" required>
+      </div>
+
+      <div class="form-item">
+        <span class="material-icons-outlined">
+        </span>
+        <input type="password" name="password" id="pass" value="<%= typeof password != 'undefined' ? password : '' %>" placeholder="Password" required>
+      </div>
+
+      <div class="form-item">
+        <span class="material-icons-outlined">
+        </span>
+        <input type="password" name="password2" id="confirm-password" value="<%= typeof password2 != 'undefined' ? password2 : '' %>" placeholder="Confirm Password" required>
+      </div>
+
+
+      <button type="submit">SIGN UP</button>
+    </form>
+  </div>
+</body>
+
+</html>

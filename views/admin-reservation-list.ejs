@@ -1,0 +1,50 @@
+<%- include('includes/_admin-header'); -%>
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary">
+            <h3 class="card-title">List of Customer Reservation Request</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th hidden="">No.</th>
+                  <th>Email</th>
+                  <th>Date of Event</th>
+                  <th>Type of Events</th>
+                  <th>Event Location</th>
+                  <th>Expected No. of Guests</th>
+                  <th>Contact Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for(var i = 0; i < reservation.length; i++) { %>
+                <tr>
+                  <td hidden=""><%= i + 1 %></td>
+                  <td><%= reservation[i].email %></td>
+                  <td><%= reservation[i].date_event %></td>
+                  <td><%= reservation[i].event %></td>
+                  <td><%= reservation[i].event_location %></td>
+                  <td><%= reservation[i].expected_no %></td>
+                  <td><%= reservation[i].cpnumber %></td>
+                  <!-- <td>
+                    <a data-id="<% reservation[i]._id%>" class="btn btn-danger delete .btn-sm">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </td> -->
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+    </div>
+  </div>
+  
+<%- include('includes/_admin-footer'); -%>
