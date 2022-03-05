@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		}
+	],
+	"settings": {
+		"sqltools.connections": [
+			{
+				"mysqlOptions": {
+					"authProtocol": "default"
+				},
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 3306,
+				"driver": "MySQL",
+				"name": "gigi",
+				"database": "nodejs",
+				"username": "debs",
+				"password": "root"
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "pwa-chrome",
+				"request": "launch",
+				"name": "Launch Chrome against localhost",
+				"url": "http://localhost:8080",
+				"webRoot": "${workspaceFolder}"
+			}
+		]
+	}
+}
